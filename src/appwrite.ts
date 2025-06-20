@@ -1,4 +1,5 @@
 import { Client, Databases, ID, Query } from "appwrite";
+import type { Movie } from "./components/Card.tsx";
 
 const PROJECT_ID = import.meta.env.VITE_APPWRITE_PROJECT_ID;
 const DATABASE_ID = import.meta.env.VITE_APPWRITE_DATABASE_ID;
@@ -10,7 +11,7 @@ const client = new Client()
 
 const database = new Databases(client);
 
-export const updateSearchCount = async (searchTerm, movie) => {
+export const updateSearchCount = async (searchTerm: string, movie: Movie) => {
   // 1. Use Appwrite SDK to check if the search term exists in the database
   try {
     const result = await database.listDocuments(DATABASE_ID, COLLECTION_ID, [
