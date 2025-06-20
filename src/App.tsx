@@ -74,15 +74,7 @@ const App = () => {
     }
   };
 
-  // const loadTrendingMovies = async () => {
-  //   try {
-  //     const movies = await getTrendingMovies();
-  //     console.log("Trending movies:", movies);
-  //     setTrendingMovies(movies || []);
-  //   } catch (error) {
-  //     console.error(`Error fetching trending movies: ${error}`);
-  //   }
-  // };
+
 
   useEffect(() => {
     fetchMovies(debouncedSearchTerm);
