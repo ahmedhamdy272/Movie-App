@@ -1,6 +1,19 @@
+export type Movie = {
+  title: string;
+  vote_average: number;
+  poster_path: string;
+  release_date: string;
+  original_language: string;
+  id?: number;
+};
+
+interface CardProps {
+  movie: Movie;
+}
+
 const Card = ({
   movie: { title, vote_average, poster_path, release_date, original_language },
-}) => {
+}: CardProps) => {
   return (
     <div className="movie-card">
       <img
