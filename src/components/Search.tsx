@@ -1,4 +1,10 @@
-const Search = ({ searchTerm, setSearchTerm }) => {
+export type SearchProps = {
+  searchTerm: string;
+  setSearchTerm: (value: string) => void;
+};
+
+const Search = (props: SearchProps) => {
+  const { searchTerm, setSearchTerm } = props;
   return (
     <div className="search">
       <div>
